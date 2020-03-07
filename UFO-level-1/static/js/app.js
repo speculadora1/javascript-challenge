@@ -19,6 +19,7 @@ function renderTable(dataset) {
     });
 };
 
+// render table from ufo data
 renderTable(tableData);
 
 // select the 'filter table' button
@@ -26,7 +27,8 @@ var filterSubmit = d3.select("#filter-btn");
 
 // function to handle what happens on a click
 filterSubmit.on("click", function() {
-    // select the text from the filter form
+
+    // select the values from the filter form
     var dateToFilter = d3.select("#datetime").property("value");
 
     // re-render the original table if the filter date is empty
